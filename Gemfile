@@ -7,7 +7,7 @@ gem 'rails', '4.2.10'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '1.3.13'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
@@ -22,9 +22,9 @@ group :test do
   gem 'cucumber-rails-training-wheels'
   gem 'factory_girl_rails', '~> 4.7'
 end
-group :production do
-  gem 'pg'
-end
+#group :production do
+#gem 'pg'
+#end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -36,7 +36,7 @@ gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
 gem 'haml'
-
+gem 'pg', '~> 0.20'
 # Use unicorn as the web server
 # gem 'unicorn'
 

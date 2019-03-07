@@ -209,3 +209,77 @@ Did you mean?  search_field_tag):
   Rendered /home/ec2-user/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
   Rendered /home/ec2-user/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /home/ec2-user/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.7ms)
+
+
+Started GET "/" for 208.180.184.130 at 2019-03-07 04:59:32 +0000
+
+
+Started GET "/movies" for 208.180.184.130 at 2019-03-07 04:59:32 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 198ms (Views: 167.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/1" for 208.180.184.130 at 2019-03-07 04:59:34 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 27ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/similar_movies/Aladdin" for 208.180.184.130 at 2019-03-07 04:59:36 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Aladdin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+Redirected to https://80fb59bb83194a07901adac698c407f4.vfs.cloud9.us-east-2.amazonaws.com/
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 208.180.184.130 at 2019-03-07 04:59:36 +0000
+
+
+Started GET "/movies" for 208.180.184.130 at 2019-03-07 04:59:36 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 208.180.184.130 at 2019-03-07 05:39:57 +0000
+
+
+Started GET "/movies" for 208.180.184.130 at 2019-03-07 05:39:57 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 177ms (Views: 137.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/1" for 208.180.184.130 at 2019-03-07 05:39:59 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/similar_movies/Aladdin" for 208.180.184.130 at 2019-03-07 05:40:00 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"Aladdin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+Redirected to https://80fb59bb83194a07901adac698c407f4.vfs.cloud9.us-east-2.amazonaws.com/
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 208.180.184.130 at 2019-03-07 05:40:00 +0000
+
+
+Started GET "/movies" for 208.180.184.130 at 2019-03-07 05:40:01 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms)
